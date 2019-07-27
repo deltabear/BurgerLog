@@ -43,6 +43,8 @@ var orm = {
       cb(res);
     });
   },
+
+  // Inserts single table entry
   insertOne: function(table, cols, vals, cb) {
     var dbQuery =
       "INSERT INTO " +
@@ -62,6 +64,8 @@ var orm = {
       cb(res);
     });
   },
+
+  // Updates single table entry
   updateOne: function(table, objColVals, condition, cb) {
     var dbQuery =
       "UPDATE " +
@@ -79,18 +83,8 @@ var orm = {
       }
       cb(res);
     });
-  },
-  deleteOne: function(table, condition, cb) {
-    var dbQuery = "DELETE FROM " + table + " WHERE " + condition;
-    console.log(dbQuery);
-
-    connection.query(dbQuery, function(err, res) {
-      if (err) {
-        throw err;
-      }
-      cb(res);
-    });
   }
 };
+
 // Export the orm object for the model
 module.exports = orm;
