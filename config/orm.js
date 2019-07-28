@@ -46,7 +46,7 @@ var orm = {
 			}
 
 			// Return results in callback
-			cb(result);
+			cb(res);
 		});
 	},
 
@@ -66,13 +66,13 @@ var orm = {
 		// console.log(queryString);
 
 		// Perform the database query
-		connection.query(queryString, vals, function(err, result) {
+		connection.query(queryString, vals, function(err, res) {
 			if (err) {
 				throw err;
 			}
 
 			// Return results in callback
-			cb(result);
+			cb(res);
 		});
 	},
 
@@ -91,13 +91,13 @@ var orm = {
 		// console.log(queryString);
 
 		// Perform the database query
-		connection.query(queryString, function(err, result) {
+		connection.query(queryString, function(err, res) {
 			if (err) {
 				throw err;
 			}
 
 			// Return results in callback
-			cb(result);
+			cb(res);
 		});
 	}
 };
