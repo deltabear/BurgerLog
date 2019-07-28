@@ -40,7 +40,7 @@ var orm = {
 		var queryString = "SELECT * FROM " + tableInput + ";";
 
 		// Perform the database query
-		connection.query(queryString, function(err, result) {
+		connection.query(queryString, function(err, res) {
 			if (err) {
 				throw err;
 			}
